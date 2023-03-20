@@ -53,16 +53,16 @@ form.addEventListener('submit', (e) => {
         author: inputAuthor.value,
         id: books[books.length - 1].id + 1,
       });
-      inputTitle.value = ""
-      inputAuthor.value = ""
+      inputTitle.value = '';
+      inputAuthor.value = '';
     } else {
       books.push({
         title: inputTitle.value,
         author: inputAuthor.value,
         id: 1,
       });
-      inputTitle.value = ""
-      inputAuthor.value = ""
+      inputTitle.value = '';
+      inputAuthor.value = '';
     }
 
     localStorage.setItem('books', JSON.stringify(books));
