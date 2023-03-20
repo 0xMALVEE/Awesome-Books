@@ -33,17 +33,17 @@ if (reterevedBooks) {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (inputTitle.value.length !== 0 && inputAuthor.value.length !== 0) {
-    if(books.length !== 0){
+    if (books.length !== 0) {
       books.push({
         title: inputTitle.value,
         author: inputAuthor.value,
-        id: books[books.length -1].id + 1
+        id: books[books.length - 1].id + 1,
       });
-    }else{
+    } else {
       books.push({
         title: inputTitle.value,
         author: inputAuthor.value,
-        id: 1
+        id: 1,
       });
     }
 
@@ -52,10 +52,15 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-books.forEach(book=>{
-  const removeBtn = document.querySelector("#remove-" + book.id)
+books.forEach((book) => {
+  const removeBtn = document.querySelector('#remove-' + book.id);
 
-   removeBtn.addEventListener("click", function(){
+  removeBtn.addEventListener('click', function () {
     const id = book.id;
-  })
-})
+
+    books = books.filter((element) => element.id !== book.id);
+
+    localStorage.setItem('books', JSON.stringify(books));
+    renderBooks();
+  });
+});
