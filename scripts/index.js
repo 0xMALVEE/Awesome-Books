@@ -16,7 +16,7 @@ function renderBooks() {
       <div>
         <p>${book.title}</p>
         <p>${book.author}</p>
-        <button> Remove </button>
+        <button id="remove-${book.id}"> Remove </button>
       </div>
       <hr>
     `;
@@ -33,11 +33,29 @@ if (reterevedBooks) {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (inputTitle.value.length !== 0 && inputAuthor.value.length !== 0) {
-    books.push({
-      title: inputTitle.value,
-      author: inputAuthor.value,
-    });
+    if(books.length !== 0){
+      books.push({
+        title: inputTitle.value,
+        author: inputAuthor.value,
+        id: books[books.length -1].id + 1
+      });
+    }else{
+      books.push({
+        title: inputTitle.value,
+        author: inputAuthor.value,
+        id: 1
+      });
+    }
+
     localStorage.setItem('books', JSON.stringify(books));
     renderBooks();
   }
 });
+
+books.forEach(book=>{
+  const removeBtn = document.querySelector("#remove-" + book.id)
+
+   removeBtn.addEventListener("click", function(){
+    const id = book.id;
+  })
+})
