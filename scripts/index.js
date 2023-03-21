@@ -4,69 +4,79 @@ const form = document.querySelector('.form');
 
 const bookList = document.querySelector('.books-list');
 
-let books = [];
+class BookList{
+  constructor(){
+    this.books = []
+  }
+
+  addBook(){
+    if (inputTitle.value.length !== 0 && inputAuthor.value.length !== 0) {
+      if (this.books.length !== 0) {
+        this.books.push({
+          title: inputTitle.value,
+          author: inputAuthor.value,
+          id: this.books[this.books.length - 1].id + 1,
+        });
+        inputTitle.value = '';
+        inputAuthor.value = '';
+      } else {
+        this.books.push({
+          title: inputTitle.value,
+          author: inputAuthor.value,
+          id: 1,
+        });
+        inputTitle.value = '';
+        inputAuthor.value = '';
+      }
+  
+      localStorage.setItem('books', JSON.stringify(this.books));
+      this.renderBooks();
+      this.setRemoveEventListeners();
+    }
+  }
+
+  renderBooks(){
+    let finalHtml = '';
+
+    this.books.forEach((book) => {
+      const htmlToInsert = `
+        <div>
+          <p>${book.title}</p>
+          <p>${book.author}</p>
+          <button id="remove-${book.id}"> Remove </button>
+        </div>
+        <hr>
+      `;
+      finalHtml += htmlToInsert;
+    });
+    bookList.innerHTML = finalHtml;
+  }
+
+  setRemoveEventListeners() {
+    this.books.forEach((book) => {
+      const removeBtn = document.getElementById(`remove-${book.id}`);
+      removeBtn.addEventListener('click', () => {
+        this.books = this.books.filter((element) => element.id !== book.id);
+  
+        localStorage.setItem('books', JSON.stringify(this.books));
+        this.renderBooks();
+        this.setRemoveEventListeners();
+      });
+    });
+  }
+}
+
+const booksList = new BookList()
 
 const reterevedBooks = localStorage.getItem('books');
 
-function renderBooks() {
-  let finalHtml = '';
-
-  books.forEach((book) => {
-    const htmlToInsert = `
-      <div>
-        <p>${book.title}</p>
-        <p>${book.author}</p>
-        <button id="remove-${book.id}"> Remove </button>
-      </div>
-      <hr>
-    `;
-    finalHtml += htmlToInsert;
-  });
-  bookList.innerHTML = finalHtml;
-}
-
-function setRemoveEventListeners() {
-  books.forEach((book) => {
-    const removeBtn = document.getElementById(`remove-${book.id}`);
-    removeBtn.addEventListener('click', () => {
-      books = books.filter((element) => element.id !== book.id);
-
-      localStorage.setItem('books', JSON.stringify(books));
-      renderBooks();
-      setRemoveEventListeners();
-    });
-  });
-}
-
 if (reterevedBooks) {
-  books.push(...JSON.parse(reterevedBooks));
-  renderBooks();
-  setRemoveEventListeners();
+  booksList.books.push(...JSON.parse(reterevedBooks))
+  booksList.renderBooks()
+  booksList.setRemoveEventListeners();
 }
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (inputTitle.value.length !== 0 && inputAuthor.value.length !== 0) {
-    if (books.length !== 0) {
-      books.push({
-        title: inputTitle.value,
-        author: inputAuthor.value,
-        id: books[books.length - 1].id + 1,
-      });
-      inputTitle.value = '';
-      inputAuthor.value = '';
-    } else {
-      books.push({
-        title: inputTitle.value,
-        author: inputAuthor.value,
-        id: 1,
-      });
-      inputTitle.value = '';
-      inputAuthor.value = '';
-    }
-
-    localStorage.setItem('books', JSON.stringify(books));
-    renderBooks();
-    setRemoveEventListeners();
-  }
+  booksList.addBook()
 });
