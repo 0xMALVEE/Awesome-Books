@@ -38,8 +38,7 @@ body {
 }
 
 .line {
-  margin-right: 46vw;
-  margin-left: 46vw;
+  width: 8%;
   border: 0.5px solid black;
 }
 
