@@ -150,13 +150,13 @@ command:
 
 To run tests, run the following command:
 
-<!--
-Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  npx hnit .
+  npx eslint .
+  npx stylelint .
 ```
---->
+
 
 ### Deployment
 
