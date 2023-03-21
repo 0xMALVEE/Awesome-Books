@@ -4,12 +4,12 @@ const form = document.querySelector('.form');
 
 const bookList = document.querySelector('.books-list');
 
-class BookList{
-  constructor(){
-    this.books = []
+class BookList {
+  constructor() {
+    this.books = [];
   }
 
-  addBook(){
+  addBook() {
     if (inputTitle.value.length !== 0 && inputAuthor.value.length !== 0) {
       if (this.books.length !== 0) {
         this.books.push({
@@ -28,14 +28,14 @@ class BookList{
         inputTitle.value = '';
         inputAuthor.value = '';
       }
-  
+
       localStorage.setItem('books', JSON.stringify(this.books));
       this.renderBooks();
       this.setRemoveEventListeners();
     }
   }
 
-  renderBooks(){
+  renderBooks() {
     let finalHtml = '';
 
     this.books.forEach((book) => {
@@ -57,7 +57,7 @@ class BookList{
       const removeBtn = document.getElementById(`remove-${book.id}`);
       removeBtn.addEventListener('click', () => {
         this.books = this.books.filter((element) => element.id !== book.id);
-  
+
         localStorage.setItem('books', JSON.stringify(this.books));
         this.renderBooks();
         this.setRemoveEventListeners();
@@ -66,17 +66,17 @@ class BookList{
   }
 }
 
-const booksList = new BookList()
+const booksList = new BookList();
 
 const reterevedBooks = localStorage.getItem('books');
 
 if (reterevedBooks) {
-  booksList.books.push(...JSON.parse(reterevedBooks))
-  booksList.renderBooks()
+  booksList.books.push(...JSON.parse(reterevedBooks));
+  booksList.renderBooks();
   booksList.setRemoveEventListeners();
 }
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  booksList.addBook()
+  booksList.addBook();
 });
