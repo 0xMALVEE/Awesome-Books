@@ -154,7 +154,7 @@ To run tests, run the following command:
 ```sh
   npx hint .
   npx eslint .
-  npx stylelint .
+  npx stylelint "**/*.{css,scss}"
 ```
 
 
