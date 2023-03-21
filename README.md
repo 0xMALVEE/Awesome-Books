@@ -160,15 +160,11 @@ To run tests, run the following command:
 
 ### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
+You can deploy this project by just pushing it and github pages will do the rest:
 ```sh
-
+  git push
 ```
- -->
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
