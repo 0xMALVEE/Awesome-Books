@@ -152,7 +152,7 @@ To run tests, run the following command:
 
 
 ```sh
-  npx hnit .
+  npx hint .
   npx eslint .
   npx stylelint .
 ```
