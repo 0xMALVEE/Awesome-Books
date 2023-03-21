@@ -37,19 +37,22 @@ class BookList {
 
   renderBooks() {
     let finalHtml = '';
-
+    let i = 0;
     this.books.forEach((book) => {
+      let grayBg = '';
+      if (i % 2 === 0) {
+        grayBg = 'gray-bg';
+      }
       const htmlToInsert = `
-        <div>
-          <p>${book.title}</p>
-          <p>${book.author}</p>
+        <div class="books ${grayBg}">
+          <p>"${book.title}" By ${book.author}</p>
           <button id="remove-${book.id}"> Remove </button>
         </div>
-        <hr>
       `;
+      i++;
       finalHtml += htmlToInsert;
     });
-    bookList.innerHTML = finalHtml;
+    bookList.innerHTML = `<div class="book-wrapper">${finalHtml}</div>`;
   }
 
   setRemoveEventListeners() {
