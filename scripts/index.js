@@ -49,7 +49,7 @@ class BookList {
           <button id="remove-${book.id}"> Remove </button>
         </div>
       `;
-      i++;
+      i += 1;
       finalHtml += htmlToInsert;
     });
     bookList.innerHTML = `<div class="book-wrapper">${finalHtml}</div>`;
