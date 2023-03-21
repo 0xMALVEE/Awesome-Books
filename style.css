@@ -1,3 +1,63 @@
-.form div {
-  margin: 10px;
+body {
+  text-align: center;
+}
+
+.book-wrapper {
+  border: 3px solid black;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.books {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gray-bg {
+  background-color: gray;
+}
+
+.books button {
+  padding: 2px 5px;
+  background-color: #fff;
+  margin-bottom: 2px;
+  margin-right: 10px;
+}
+
+.books p {
+  margin: 5px 5px;
+}
+
+.add-book {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  width: 8%;
+  border: 0.5px solid black;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-align: right;
+}
+
+.add-book input {
+  border: 3px solid black;
+  margin-bottom: 10px;
+}
+
+.add-book input::placeholder {
+  color: black;
+}
+
+.btn-add {
+  background-color: #fff;
 }

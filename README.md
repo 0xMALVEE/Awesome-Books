@@ -87,8 +87,8 @@ After you're finished please remove all the comments and instructions!
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+[Coming soon](https://0xmalvee.github.io/Awesome-Books)
 
-Not avaialable 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,25 +150,21 @@ command:
 
 To run tests, run the following command:
 
-<!--
-Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  npx hint .
+  npx eslint .
+  npx stylelint "**/*.{css,scss}"
 ```
---->
+
 
 ### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
+You can deploy this project by just pushing it and github pages will do the rest:
 ```sh
-
+  git push
 ```
- -->
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
