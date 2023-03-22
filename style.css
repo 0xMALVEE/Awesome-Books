@@ -2,11 +2,55 @@ body {
   text-align: center;
 }
 
+/* Styling Header */
+
+header {
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h4 {
+  margin: 5px 10px;
+}
+
+nav {
+  margin: 5px 10px;
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  margin: initial;
+  gap: 5px;
+}
+
+nav li {
+  list-style: none;
+  border-right: 2px solid black;
+  padding-right: 5px;
+}
+
+nav li:hover {
+  cursor: pointer;
+}
+
+.contact {
+  border-right: none;
+}
+
+/* styling books and add menu  */
+
+.time-stamp {
+  text-align: right;
+}
+
 .book-wrapper {
   border: 3px solid black;
   text-align: left;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .books {
@@ -35,17 +79,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.line {
-  width: 8%;
-  border: 0.5px solid black;
+  margin-bottom: 40px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  text-align: center;
   text-align: right;
 }
 
@@ -60,4 +99,36 @@ body {
 
 .btn-add {
   background-color: #fff;
+}
+
+/* contact */
+
+.contact-tab {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* Styling footer  */
+
+footer {
+  border: 3px solid black;
+  display: flex;
+  justify-content: left;
+}
+
+footer h4 {
+  margin: 5px 10px;
+}
+
+/* Hidding tabs */
+
+.hidden {
+  display: none;
+}
+
+.current {
+  color: blue;
 }
