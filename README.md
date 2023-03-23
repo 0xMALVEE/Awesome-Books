@@ -162,6 +162,7 @@ To run tests, run the following command:
 
 You can deploy this project by just pushing it and github pages will do the rest:
 ```sh
+  git checkout main
   git push
 ```
 
