@@ -31,7 +31,7 @@ After you're finished please remove all the comments and instructions!
   <br/>
 
   <h3><b>Awesome Books</b></h3>
-
+  
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -42,7 +42,6 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -61,6 +60,7 @@ After you're finished please remove all the comments and instructions!
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Awesome Book] <a name="about-project"></a>
+This is book list projects where you can add books and remove books and see them in a list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,7 +70,7 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">HTML and CSS</a></li>
+    <li><a href="https://reactjs.org/">HTML, CSS and JS</a></li>
   </ul>
 </details>
 
@@ -85,9 +85,6 @@ After you're finished please remove all the comments and instructions!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-[Coming soon](https://0xmalvee.github.io/Awesome-Books)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -162,6 +159,7 @@ To run tests, run the following command:
 
 You can deploy this project by just pushing it and github pages will do the rest:
 ```sh
+  git checkout main
   git push
 ```
 
@@ -172,15 +170,13 @@ You can deploy this project by just pushing it and github pages will do the rest
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
-👤 **Author1**
+👤 **Alvee**
 
 - GitHub: [@githubhandle](https://github.com/0xmalvee)
 - Twitter: [@twitterhandle](https://twitter.com/alveedev)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/0xmalvee)
 
-👤 **Author2**
+👤 **Rushemaa**
 
 - GitHub: [@githubhandle](https://github.com/rushemaa)
 
