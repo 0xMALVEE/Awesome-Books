@@ -31,7 +31,7 @@ After you're finished please remove all the comments and instructions!
   <br/>
 
   <h3><b>Awesome Books</b></h3>
-  This is book list projects where you can add books and remove books and see them in a list.
+  
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -60,6 +60,7 @@ After you're finished please remove all the comments and instructions!
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Awesome Book] <a name="about-project"></a>
+This is book list projects where you can add books and remove books and see them in a list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
