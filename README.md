@@ -70,7 +70,7 @@ This is book list projects where you can add books and remove books and see them
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">HTML and CSS</a></li>
+    <li><a href="https://reactjs.org/">HTML, CSS and JS</a></li>
   </ul>
 </details>
 
