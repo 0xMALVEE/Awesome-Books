@@ -169,13 +169,13 @@ You can deploy this project by just pushing it and github pages will do the rest
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Alvee**
 
 - GitHub: [@githubhandle](https://github.com/0xmalvee)
 - Twitter: [@twitterhandle](https://twitter.com/alveedev)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/0xmalvee)
 
-👤 **Author2**
+👤 **Rushemaa**
 
 - GitHub: [@githubhandle](https://github.com/rushemaa)
 
